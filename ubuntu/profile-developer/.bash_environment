@@ -1,0 +1,35 @@
+# Projects
+export PROJECTS_HOME=$HOME/projects
+
+# Python Virtualenv
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export VIRTUALENVWRAPPER_VIRTUALENV=/usr/bin/virtualenv
+export WORKON_HOME=$HOME/.virtualenvs
+
+source /home/linuxbrew/.linuxbrew/bin/virtualenvwrapper.sh
+
+# Poetry
+#export PATH=$PATH:$HOME/.poetry/bin
+
+# Golang Environment
+export GOROOT=/usr/local/go
+export GOPATH=$PROJECTS_HOME/go
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin:$GOBIN
+
+# oh-my-posh terminal prompt
+if [ -f /home/linuxbrew/.linuxbrew/bin/oh-my-posh ] && [ "$TERM_PROGRAM" != "vscode" ]; then
+    eval "$(/home/linuxbrew/.linuxbrew/bin/oh-my-posh init bash --config ~/.poshthemes/meridian-2.omp.json)"
+else
+    PS1="\[$CYAN\]\[$GREEN\][\w]$(__git_ps1)\$ \[$NORMAL\]"
+    PS2='\[$GREEN\]continue-> $NORMAL'
+fi
+
+# TFenv: Terraform version management
+export PATH=$PATH:$HOME/.tfenv/bin
+
+# Browser Settings
+export BROWSER=/mnt/c/Program\ Files\ \(x86\)/Microsoft/Edge/Application/msedge.exe
+
+# Python UV
+# eval "$(uv generate-shell-completion bash)"

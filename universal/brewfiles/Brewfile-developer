@@ -1,0 +1,72 @@
+tap "jandedobbeleer/oh-my-posh"   # Theme engine for prompt styling
+tap "sinelaw/fresh"               # Fresh text editor tap
+
+# Core CLI Tools
+brew "bat"                        # Modern cat with syntax highlighting
+brew "direnv"                     # Auto-load environment variables per directory
+brew "fzf"                        # Fuzzy finder
+brew "git"                        # Version control
+brew "gh"                         # GitHub CLI
+brew "htop"                       # Interactive process monitor
+brew "jq"                         # JSON processor
+brew "sinelaw/fresh/fresh-editor" # Fresh terminal text editor
+brew "ripgrep"                    # Fast search utility
+brew "tmux"                       # Terminal multiplexer
+brew "tree"                       # Directory tree viewer
+brew "tldr"                       # Simplified manual pages
+brew "age"                        # Modern encryption tool
+brew "gnupg"                      # GPG encryption/signing
+brew "ipcalc"                     # IPv4/IPv6 subnet calculator
+
+# Programming Languages
+brew "go"                         # Go programming language
+
+# Networking Tools
+brew "iperf3"                     # Network throughput testing
+brew "mtr"                        # Network diagnostic tool
+brew "nmap"                       # Network scanning
+brew "speedtest-cli"              # Internet bandwidth testing
+
+# Cloud & Kubernetes
+brew "kubectl"                    # Kubernetes CLI
+brew "kubectx"                    # Kubernetes context selector
+brew "stern"                      # Kubernetes log tailing
+brew "awscli"                     # AWS Command Line Interface
+brew "aws-sso-cli"                # AWS SSO authentication
+brew "step"                       # Smallstep certificate tools
+brew "grpcurl"                    # gRPC command-line client
+
+# IaC / Security
+brew "terraform-docs"             # Terraform docs generator
+brew "tfenv"                      # Terraform version manager
+brew "tflint"                     # Terraform linter
+brew "checkov"                    # IaC security scanner
+brew "trivy"                      # Dependency/image scanner
+brew "semgrep"                    # Code scanning tool
+
+# Config / Formatting
+brew "yq"                         # YAML processor
+brew "yamllint"                   # YAML linter
+brew "jsonlint"                   # JSON linter
+
+# Python Tooling
+brew "pyenv"                      # Python version manager
+brew "virtualenv"                 # Python virtual environments
+brew "virtualenvwrapper"          # Virtualenv workflow improvements
+
+# Container Tools
+brew "hadolint"                   # Dockerfile linter
+
+# Ansible
+brew "ansible"                    # Automation tool
+brew "ansible-lint"               # Ansible linter
+
+# Misc
+brew "just"                       # Task runner
+brew "jandedobbeleer/oh-my-posh/oh-my-posh"  # Prompt theming engine
+brew "pre-commit"                 # Git hook manager
+
+# macOS Only (ignored on Linux)
+cask "1password-cli"              # 1Password command-line tool
+cask "meetingbar"                 # Menu app bar for calendar reminders
+cask "monitorcontrol"             # External display brightness

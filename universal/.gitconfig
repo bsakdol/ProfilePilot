@@ -1,0 +1,19 @@
+[user]
+    name = {FULL NAME}
+    email = {MASKED EMAIL}@users.noreply.github.com
+    username = {GITHUB USERNAME}
+
+[includeIf "gitdir:~/projects/github/"]
+    path = ~/projects/github/.gitconfig
+
+[includeIf "gitdir:~/projects/ghe/"]
+    path = ~/projects/ghe/.gitconfig
+
+[commit]
+    template = ~/.gitmessage
+
+[init]
+    defaultBranch = main
+
+[core]
+    editor = code --wait

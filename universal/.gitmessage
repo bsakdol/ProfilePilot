@@ -1,0 +1,35 @@
+# [<ticket #>] <type>: <subject> (Why is this change necessary?)
+# <---------- Maximum of 50 Characters --------->|
+
+
+# <--------------- Limit each line to less than 80 characters --------------->|
+# How does the commit address the issue?
+
+# Describe any side effects of this change.
+
+# Provide links or keys to any relevant tickets or other sources of information
+# Examples: "Closes issue #1234" or "Jira issue [NET-1234]"
+#
+# --- COMMIT END ---
+# Type:
+#   chore    (updating grunt tasks etc; no production code change)
+#   docs     (changes to documentation)
+#   feat     (new feature)
+#   fix      (bug fix)
+#   refactor (refactoring production code)
+#   rem      (remove feature)
+#   style    (formatting, missing newline, etc; no code changes)
+#   test     (adding ro refactoring tests; no production change)
+#   wip      (work in progress commit to be squashed -- **do not push!**)
+# ------------------
+# Reminders:
+#   - Capitalize the subject line
+#   - Do not end the subject line with a period
+#   - Separate subject from body with a blank line
+#   - Use the body of the commit to explain what and why, not how
+#   - Can create bullet points in the body with "-"
+# ------------------
+# "wip" commit:
+#   A wip commit should only happen on a local branch. These commits are for
+#   unfinished snapshots that should not be checked into a shared branch.
+#   Before pushing to a shared branch, ensure the wip commits are squashed.

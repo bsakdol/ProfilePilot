@@ -1,0 +1,19 @@
+# Core CLI Tools
+brew "htop"                       # Process viewer
+brew "jq"                         # JSON processor
+brew "tmux"                       # Terminal multiplexer
+brew "tree"                       # Directory viewer
+brew "tldr"                       # Simplified man pages
+brew "gnupg"                      # GPG encryption/signing
+
+# Networking Tools
+brew "iperf3"                     # Bandwidth tester
+brew "mtr"                        # Ping + traceroute tool
+brew "nmap"                       # Network scanner
+
+# Config / Formatting
+brew "yq"                         # YAML processor
+brew "jsonlint"                   # JSON validator
+
+# Misc Utilities
+brew "just"                       # Task runner

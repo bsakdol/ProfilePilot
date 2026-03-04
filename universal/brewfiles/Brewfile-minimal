@@ -1,0 +1,7 @@
+brew "git"                        # Essential version control
+brew "jq"                         # JSON processing
+brew "yq"                         # YAML processing
+brew "ripgrep"                    # Fast search tool
+brew "tmux"                       # Terminal multiplexer
+brew "age"                        # Modern encryption
+brew "gnupg"                      # GPG encryption/signing

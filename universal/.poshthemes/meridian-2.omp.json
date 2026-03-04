@@ -1,0 +1,118 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+
+  "upgrade": {
+    "source": "cdn",
+    "interval": "168h",
+    "auto": false,
+    "notice": true
+  },
+
+  "palette": {
+    "background": "#5A3D29",
+    "blue": "#68E1FF",
+    "coral": "#FF8F70",
+    "foreground": "#43CCEA",
+    "mint": "#7FFFD4",
+    "purple": "#9F6EFF",
+    "sand": "#E6C99F",
+    "white": "#FFFFFF",
+    "ubuntu": "#E95420",
+    "green": "#98C379"
+  },
+
+  "templates": {
+    "detailed_os": "{{ if eq .OS \"darwin\" }}macOS{{ else if ne .Distribution \"unknown\" }}{{ .Distribution | title }}{{ else }}{{ .OS | title }}{{ end }}"
+  },
+
+  "console_title_template": "{{ template \"detailed_os\" . }}",
+
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "os",
+          "style": "plain",
+          "foreground": "p:white",
+          "template": "{{ .Icon }} "
+        },
+        {
+          "type": "path",
+          "style": "powerline",
+          "foreground": "p:foreground",
+          "background": "p:background",
+          "powerline_symbol": "\ue0b0",
+          "properties": {
+            "folder_icon": "\uf115",
+            "home_icon": "\ueb06",
+            "folder_separator_icon": "<transparent> \ue0b1 </>",
+            "style": "agnoster_short"
+          },
+          "template": " {{ .Path }} "
+        },
+        {
+          "type": "git",
+          "style": "diamond",
+          "foreground": "p:green",
+          "properties": {
+            "branch_icon": "\ue725 ",
+            "fetch_status": false,
+            "fetch_stash_count": false,
+            "display_status": true
+          },
+          "template": " {{ .UpstreamIcon }}{{ (abbrev 15 .HEAD) }}{{ if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf0c5 {{ .Staging.String }}{{ end }} "
+        }
+      ]
+    },
+
+    {
+      "type": "prompt",
+      "alignment": "right",
+      "segments": [
+        {
+          "type": "time",
+          "style": "plain",
+          "foreground": "#43CCEA",
+          "properties": {
+            "time_format": "3:04:05 PM"
+          },
+          "template": "{{ .CurrentDate | date .Format }} "
+        }
+      ]
+    },
+
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "type": "python",
+          "style": "plain",
+          "foreground": "p:foreground",
+          "properties": {
+            "cache_duration": "30s",
+            "display_mode": "context"
+          },
+          "template": "\ue73c {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }}{{ end }} ({{ .Full }}){{ end }} "
+        },
+        {
+          "type": "status",
+          "style": "plain",
+          "foreground": "#ffffff",
+          "foreground_templates": [
+            "{{ if gt .Code 0 }}#ff0000{{ end }}"
+          ],
+          "properties": {
+            "always_enabled": true
+          },
+          "template": "\u276f "
+        }
+      ]
+    }
+  ],
+
+  "version": 3
+}
